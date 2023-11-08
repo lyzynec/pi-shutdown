@@ -37,7 +37,7 @@ fn main() {
   // parsing command line arguments
   let args = Args::parse();
 
-  // createing gpio input pin
+  // creating gpio input pin
   let pin = rpi::gpio::Gpio::new()?
     .get(args.shutdown_gpio)?
     .into_input_pullup();
@@ -48,7 +48,7 @@ fn main() {
   while !end.load(Ordering::Relaxed) {
     if pin.is_low() {
       sleep(Duration::from_millis(args.delay_ms));
-      shutdown::shutdown();
+      shutdown::shutdown()?;
       break;
     }
 
