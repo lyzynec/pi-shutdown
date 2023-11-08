@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 rppal = "0.15.0"
 system_shutdown = "4.0.1"
+clap = { version = "4.4.7", features = ["derive"] }
