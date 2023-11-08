@@ -1,0 +1,8 @@
+[package]
+name = "pi-shutdown"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rppal = "0.15.0"
+system_shutdown = "4.0.1"
